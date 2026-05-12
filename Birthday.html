@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,7 +29,7 @@ background:#050816;
 font-family:'Poppins',sans-serif;
 }
 
-/* ================= COMMON ================= */
+/* ================= PAGE COMMON ================= */
 
 .page{
 width:100%;
@@ -37,7 +37,6 @@ height:100vh;
 position:absolute;
 top:0;
 left:0;
-transition:1s;
 overflow:hidden;
 }
 
@@ -46,18 +45,17 @@ overflow:hidden;
 #page1{
 background:
 linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+
 display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
-overflow:hidden;
 }
 
 .stars{
 position:absolute;
 width:100%;
 height:100%;
-overflow:hidden;
 pointer-events:none;
 }
 
@@ -68,136 +66,174 @@ height:4px;
 background:white;
 border-radius:50%;
 animation:twinkle linear infinite;
-opacity:.6;
+opacity:.7;
 }
 
 @keyframes twinkle{
-0%{transform:translateY(0px);opacity:.3;}
-50%{opacity:1;}
-100%{transform:translateY(-100vh);opacity:.2;}
+
+0%{
+transform:translateY(0px);
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:.1;
+}
+
 }
 
 .main-title{
-font-size:5rem;
-font-family:'Great Vibes',cursive;
-background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:glow 2s infinite alternate;
-text-align:center;
-z-index:10;
-}
 
-@keyframes glow{
-from{
-text-shadow:0 0 20px #ff4da6;
-}
-to{
-text-shadow:0 0 40px #ffffff;
-}
+font-size:5rem;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 20px #ff4d9d;
+
+z-index:10;
+
+text-align:center;
+
 }
 
 .subtitle{
+
 margin-top:20px;
+
 font-size:2rem;
-color:white;
+
 font-family:'Cinzel',serif;
-letter-spacing:2px;
+
+color:white;
+
 z-index:10;
+
 }
 
 .option-box{
+
 margin-top:50px;
+
 display:flex;
+
 gap:30px;
-z-index:100;
+
+z-index:10;
+
 }
 
 .btn{
+
 padding:18px 40px;
+
 border:none;
+
 border-radius:50px;
+
 cursor:pointer;
+
 font-size:1.1rem;
+
 font-family:'Montserrat',sans-serif;
-font-weight:700;
+
+font-weight:bold;
+
 transition:.4s;
-position:relative;
-z-index:100;
-}
 
-.btn1{
-background:linear-gradient(45deg,#ff4d6d,#ff8fab);
 color:white;
-box-shadow:0 0 25px #ff4d6d;
-}
 
-.btn2{
-background:linear-gradient(45deg,#8338ec,#3a86ff);
-color:white;
-box-shadow:0 0 25px #3a86ff;
 }
 
 .btn:hover{
-transform:scale(1.12);
+transform:scale(1.1);
+}
+
+.btn1{
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+box-shadow:0 0 25px #ff4d6d;
+
+}
+
+.btn2{
+
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+
+box-shadow:0 0 25px #3a86ff;
+
 }
 
 /* ================= PAGE 2 ================= */
 
 #page2{
+
+display:none;
+
 background:
 linear-gradient(135deg,#120b24,#29104a,#0c1f36);
-display:none;
+
 overflow-y:auto;
-overflow-x:hidden;
+
 padding-bottom:80px;
-height:100vh;
-width:100%;
-position:absolute;
-top:0;
-left:0;
-z-index:5;
-}
 
-.show{
-display:block !important;
-animation:fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:scale(1.05);
-}
-to{
-opacity:1;
-transform:scale(1);
-}
 }
 
 .banner{
+
 display:flex;
+
 justify-content:space-between;
+
 padding:20px;
+
 }
 
 .banner img{
-width:180px;
+
+width:140px;
+
 animation:float 4s ease-in-out infinite;
+
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0px);}
-50%{transform:translateY(-20px);}
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
 }
 
 .hero{
+
 display:flex;
-align-items:center;
+
 justify-content:center;
+
+align-items:center;
+
 gap:60px;
+
 flex-wrap:wrap;
+
 padding:40px;
+
 }
 
 .left{
@@ -205,181 +241,431 @@ text-align:center;
 }
 
 .happy{
+
 font-size:5rem;
+
 font-family:'Pacifico',cursive;
+
 color:#ff7eb3;
-animation:pulse 1.5s infinite;
+
 }
 
 .birthday{
-font-size:6rem;
-font-family:'Dancing Script',cursive;
-background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
+font-size:6rem;
+
+font-family:'Dancing Script',cursive;
+
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
 }
 
 .date{
+
 margin-top:20px;
+
 font-size:2rem;
+
 font-family:'Cinzel',serif;
+
 color:#ffe066;
+
 }
 
 .mail-btn{
+
 margin-top:30px;
+
 padding:18px 40px;
+
 border:none;
+
 border-radius:40px;
-font-size:1.1rem;
+
 cursor:pointer;
-background:linear-gradient(45deg,#ff006e,#8338ec);
-color:white;
+
+font-size:1rem;
+
 font-family:'Montserrat';
+
 font-weight:bold;
-box-shadow:0 0 30px #ff006e;
+
+background:linear-gradient(45deg,#ff006e,#8338ec);
+
+color:white;
+
+box-shadow:0 0 25px #ff006e;
+
 transition:.4s;
+
 }
 
 .mail-btn:hover{
 transform:scale(1.08);
 }
 
-.right{
-position:relative;
-}
-
 .card{
+
 width:320px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
+
 padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
 border-radius:25px;
+
 text-align:center;
-box-shadow:0 0 25px rgba(255,255,255,.2);
+
 position:relative;
+
 overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
 }
 
 .card img{
+
 width:100%;
+
 border-radius:20px;
+
 }
 
 .name{
+
 margin-top:20px;
+
 font-size:2rem;
+
 font-family:'Great Vibes',cursive;
+
 color:#ffd6ff;
+
 }
 
 .circle{
+
 width:160px;
 height:160px;
+
 border:4px dashed #ffb3c6;
+
 border-radius:50%;
+
 position:absolute;
+
 top:-40px;
 right:-40px;
+
 animation:rotate 10s linear infinite;
+
 }
 
 @keyframes rotate{
+
 100%{
 transform:rotate(360deg);
 }
+
 }
 
 .circle::before{
+
 content:'💖';
+
 position:absolute;
+
 top:50%;
 left:50%;
+
 transform:translate(-50%,-50%);
+
 font-size:2rem;
-}
 
-/* MESSAGE BOX */
-
-.message-box{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%) scale(0);
-width:90%;
-max-width:750px;
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(20px);
-padding:30px;
-border-radius:30px;
-box-shadow:0 0 40px rgba(255,255,255,.2);
-transition:.5s;
-z-index:999;
-}
-
-.message-box.active{
-transform:translate(-50%,-50%) scale(1);
-}
-
-.close{
-position:absolute;
-right:25px;
-top:20px;
-font-size:1.5rem;
-color:white;
-cursor:pointer;
-}
-
-.message-title{
-font-size:3rem;
-font-family:'Great Vibes',cursive;
-text-align:center;
-color:#ffb3c6;
-margin-bottom:20px;
-}
-
-.message{
-font-size:1.2rem;
-line-height:2;
-color:white;
-font-family:'Poppins';
-text-align:center;
 }
 
 /* HEARTS */
 
 .hearts{
+
 position:absolute;
+
 width:100%;
 height:100%;
+
 pointer-events:none;
+
 overflow:hidden;
+
 }
 
 .hearts span{
+
 position:absolute;
+
 font-size:20px;
+
 animation:heartMove linear infinite;
+
 }
 
 @keyframes heartMove{
+
 0%{
 transform:translateY(100vh) scale(0);
 opacity:0;
 }
+
 50%{
 opacity:1;
 }
+
 100%{
 transform:translateY(-100vh) scale(1.5);
 opacity:0;
 }
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+width:90%;
+max-width:750px;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,255,255,.2);
+
+transition:.5s;
+
+z-index:999;
+
+text-align:center;
+
+}
+
+.message-box.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.close{
+
+position:absolute;
+
+right:25px;
+top:20px;
+
+font-size:1.5rem;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message-title{
+
+font-size:3rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffb3c6;
+
+margin-bottom:20px;
+
+}
+
+.message{
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+}
+
+.next-story-btn{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4d6d,#8338ec);
+
+color:white;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+box-shadow:0 0 25px #ff4d6d;
+
+transition:.4s;
+
+}
+
+.next-story-btn:hover{
+transform:scale(1.08);
+}
+
+/* ================= STORY PAGES ================= */
+
+.story-page{
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+z-index:9999;
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(1.05);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.bg1{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+}
+
+.bg2{
+background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
+}
+
+.bg3{
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.bg4{
+background:linear-gradient(135deg,#ee9ca7,#ffdde1);
+}
+
+.bg5{
+background:linear-gradient(135deg,#232526,#414345);
+}
+
+.bg6{
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.fancy{
+
+font-size:4rem;
+
+font-family:'Dancing Script',cursive;
+
+color:#fff5a5;
+
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:1.4rem;
+
+line-height:2.2rem;
+
+max-width:850px;
+
+color:white;
+
+}
+
+.next-btn{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:1rem;
+
+font-weight:bold;
+
+}
+
+.final-msg{
+
+font-size:3.5rem;
+
+font-family:'Pacifico',cursive;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
 }
 
 /* MOBILE */
@@ -391,7 +677,7 @@ font-size:3rem;
 }
 
 .subtitle{
-font-size:1.4rem;
+font-size:1.3rem;
 }
 
 .option-box{
@@ -407,11 +693,24 @@ font-size:4rem;
 }
 
 .banner img{
-width:120px;
+width:100px;
 }
 
 .card{
 width:280px;
+}
+
+.fancy{
+font-size:2.5rem;
+}
+
+.text{
+font-size:1.1rem;
+line-height:1.8rem;
+}
+
+.final-msg{
+font-size:2.5rem;
 }
 
 }
@@ -530,7 +829,173 @@ Always keep smiling, birthday girl 🌸
 
 </p>
 
+<button class="next-story-btn" onclick="startStory()">
+Next Surprise 🎁
+</button>
+
 </div>
+
+<!-- STORY PAGE 1 -->
+
+<section class="page story-page bg1" id="story1">
+
+<h1 class="main-title">
+Hey Birthday Girl ✨
+</h1>
+
+<div class="subtitle">
+Do You Know Me? 💖
+</div>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="nextPage(2)">
+Yea 😌
+</button>
+
+<button class="btn btn2" onclick="nextPage(2)">
+Ofcourse 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- STORY PAGE 2 -->
+
+<section class="page story-page bg2" id="story2">
+
+<div class="fancy">
+Dear Swastika Ji 🌸
+</div>
+
+<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
+🎂 Born On 13 May 🎂
+</div>
+
+<div class="text">
+
+Today is not just a normal day... 💫<br><br>
+
+Today the world became more beautiful because someone special was born. ✨<br><br>
+
+Your smile has that magical vibe which can make any bad day feel perfect. 🌹
+
+</div>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next ➜
+</button>
+
+</section>
+
+<!-- STORY PAGE 3 -->
+
+<section class="page story-page bg3" id="story3">
+
+<h1 class="final-msg">
+A Little Truth 💖
+</h1>
+
+<div class="text">
+
+Some people enter life normally...<br><br>
+
+But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
+
+And honestly... you are one of them.
+
+</div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Continue 💫
+</button>
+
+</section>
+
+<!-- STORY PAGE 4 -->
+
+<section class="page story-page bg4" id="story4">
+
+<h1 class="final-msg" style="color:#ff1493;">
+Your Vibes 🌷
+</h1>
+
+<div class="text" style="color:#222;">
+
+✨ Cute Smile<br>
+✨ Pure Heart<br>
+✨ Beautiful Nature<br>
+✨ Positive Energy<br>
+✨ And that adorable personality...<br><br>
+
+Everything about you feels special 🌸
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+One More Thing 💌
+</button>
+
+</section>
+
+<!-- STORY PAGE 5 -->
+
+<section class="page story-page bg5" id="story5">
+
+<h1 class="final-msg" style="color:#ffd700;">
+Birthday Wish 🎂
+</h1>
+
+<div class="text">
+
+I wish your every dream becomes reality ✨<br><br>
+
+May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
+
+And whenever life gets difficult...<br>
+
+Always remember that you are stronger and more amazing than you think 💫
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Final Surprise 🎁
+</button>
+
+</section>
+
+<!-- STORY PAGE 6 -->
+
+<section class="page story-page bg6" id="story6">
+
+<div class="final-msg" id="typingText"></div>
+
+<div class="text" id="animatedWish"
+style="font-family:'Dancing Script',cursive;
+font-size:2.2rem;
+opacity:0;
+transition:1s;">
+
+Keep Smiling 🌸<br>
+Keep Shining ✨<br>
+Keep Being Amazing 💖<br><br>
+
+Because people like you make the world beautiful 🌍
+
+</div>
+
+<div class="signature">
+
+— Made With Endless Efforts & Good Wishes 💫<br><br>
+
+<span style="font-size:2rem;color:#fff176;">
+By AMIT ✨
+</span>
+
+</div>
+
+</section>
 
 <script>
 
@@ -574,25 +1039,13 @@ heartsContainer.appendChild(heart);
 
 }
 
-/* PAGE OPEN FIXED */
+/* PAGE OPEN */
 
 function openPage(){
 
-const page1 = document.getElementById("page1");
-const page2 = document.getElementById("page2");
+document.getElementById('page1').style.display='none';
 
-page1.style.transition = "1s";
-page1.style.opacity = "0";
-
-setTimeout(()=>{
-
-page1.style.display = "none";
-
-page2.style.display = "block";
-
-page2.classList.add("show");
-
-},1000);
+document.getElementById('page2').style.display='block';
 
 }
 
@@ -613,6 +1066,4632 @@ messageBox.classList.add('active');
 closeBtn.onclick = () => {
 
 messageBox.classList.remove('active');
+
+}
+
+/* START STORY */
+
+function startStory(){
+
+messageBox.style.display='none';
+
+document.getElementById('page2').style.display='none';
+
+document.getElementById('story1').style.display='flex';
+
+}
+
+/* NEXT STORY */
+
+function nextPage(num){
+
+document.querySelectorAll('.story-page').forEach(page=>{
+
+page.style.display='none';
+
+});
+
+document.getElementById('story'+num).style.display='flex';
+
+if(num===6){
+
+startTyping();
+
+}
+
+}
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+let text = "Happy Birthday Swastika Ji 🎉";
+
+let i = 0;
+
+let typing = document.getElementById("typingText");
+
+typing.innerHTML = "";
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}else{
+
+document.getElementById('animatedWish').style.opacity='1';
+
+}
+
+}
+
+type();
+
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Swastika Ji 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&family=Cinzel:wght@500&family=Great+Vibes&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#050816;
+font-family:'Poppins',sans-serif;
+}
+
+/* ================= PAGE COMMON ================= */
+
+.page{
+width:100%;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+background:
+linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle linear infinite;
+opacity:.7;
+}
+
+@keyframes twinkle{
+
+0%{
+transform:translateY(0px);
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:.1;
+}
+
+}
+
+.main-title{
+
+font-size:5rem;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 20px #ff4d9d;
+
+z-index:10;
+
+text-align:center;
+
+}
+
+.subtitle{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:white;
+
+z-index:10;
+
+}
+
+.option-box{
+
+margin-top:50px;
+
+display:flex;
+
+gap:30px;
+
+z-index:10;
+
+}
+
+.btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:bold;
+
+transition:.4s;
+
+color:white;
+
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.btn1{
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+box-shadow:0 0 25px #ff4d6d;
+
+}
+
+.btn2{
+
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+
+box-shadow:0 0 25px #3a86ff;
+
+}
+
+/* ================= PAGE 2 ================= */
+
+#page2{
+
+display:none;
+
+background:
+linear-gradient(135deg,#120b24,#29104a,#0c1f36);
+
+overflow-y:auto;
+
+padding-bottom:80px;
+
+}
+
+.banner{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:20px;
+
+}
+
+.banner img{
+
+width:140px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:60px;
+
+flex-wrap:wrap;
+
+padding:40px;
+
+}
+
+.left{
+text-align:center;
+}
+
+.happy{
+
+font-size:5rem;
+
+font-family:'Pacifico',cursive;
+
+color:#ff7eb3;
+
+}
+
+.birthday{
+
+font-size:6rem;
+
+font-family:'Dancing Script',cursive;
+
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.date{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:#ffe066;
+
+}
+
+.mail-btn{
+
+margin-top:30px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+background:linear-gradient(45deg,#ff006e,#8338ec);
+
+color:white;
+
+box-shadow:0 0 25px #ff006e;
+
+transition:.4s;
+
+}
+
+.mail-btn:hover{
+transform:scale(1.08);
+}
+
+.card{
+
+width:320px;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+}
+
+.name{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffd6ff;
+
+}
+
+.circle{
+
+width:160px;
+height:160px;
+
+border:4px dashed #ffb3c6;
+
+border-radius:50%;
+
+position:absolute;
+
+top:-40px;
+right:-40px;
+
+animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.circle::before{
+
+content:'💖';
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:2rem;
+
+}
+
+/* HEARTS */
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.hearts span{
+
+position:absolute;
+
+font-size:20px;
+
+animation:heartMove linear infinite;
+
+}
+
+@keyframes heartMove{
+
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+width:90%;
+max-width:750px;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,255,255,.2);
+
+transition:.5s;
+
+z-index:999;
+
+text-align:center;
+
+}
+
+.message-box.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.close{
+
+position:absolute;
+
+right:25px;
+top:20px;
+
+font-size:1.5rem;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message-title{
+
+font-size:3rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffb3c6;
+
+margin-bottom:20px;
+
+}
+
+.message{
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+}
+
+.next-story-btn{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4d6d,#8338ec);
+
+color:white;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+box-shadow:0 0 25px #ff4d6d;
+
+transition:.4s;
+
+}
+
+.next-story-btn:hover{
+transform:scale(1.08);
+}
+
+/* ================= STORY PAGES ================= */
+
+.story-page{
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+z-index:9999;
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(1.05);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.bg1{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+}
+
+.bg2{
+background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
+}
+
+.bg3{
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.bg4{
+background:linear-gradient(135deg,#ee9ca7,#ffdde1);
+}
+
+.bg5{
+background:linear-gradient(135deg,#232526,#414345);
+}
+
+.bg6{
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.fancy{
+
+font-size:4rem;
+
+font-family:'Dancing Script',cursive;
+
+color:#fff5a5;
+
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:1.4rem;
+
+line-height:2.2rem;
+
+max-width:850px;
+
+color:white;
+
+}
+
+.next-btn{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:1rem;
+
+font-weight:bold;
+
+}
+
+.final-msg{
+
+font-size:3.5rem;
+
+font-family:'Pacifico',cursive;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+font-size:3rem;
+}
+
+.subtitle{
+font-size:1.3rem;
+}
+
+.option-box{
+flex-direction:column;
+}
+
+.happy{
+font-size:3rem;
+}
+
+.birthday{
+font-size:4rem;
+}
+
+.banner img{
+width:100px;
+}
+
+.card{
+width:280px;
+}
+
+.fancy{
+font-size:2.5rem;
+}
+
+.text{
+font-size:1.1rem;
+line-height:1.8rem;
+}
+
+.final-msg{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+<div class="stars"></div>
+
+<h1 class="main-title">
+Hey Birthday Girl 💖
+</h1>
+
+<h2 class="subtitle">
+DO YOU KNOW ME?
+</h2>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="openPage()">
+Yea ✨
+</button>
+
+<button class="btn btn2" onclick="openPage()">
+Ofcourse 💫
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<div class="hearts"></div>
+
+<div class="banner">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+</div>
+
+<div class="hero">
+
+<div class="left">
+
+<h1 class="happy">Happy</h1>
+
+<h1 class="birthday">Birthday</h1>
+
+<div class="date">
+🎂 13 May ✨
+</div>
+
+<button class="mail-btn" id="openMessage">
+Click Here Swastika Ji 💌
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle"></div>
+
+<img src="https://i.pinimg.com/736x/87/ea/e8/87eae89dc58f2e19d71fa8d78c35f5c.jpg">
+
+<div class="name">
+Dear Swastika Ji 💖
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE BOX -->
+
+<div class="message-box" id="messageBox">
+
+<div class="close" id="closeBox">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<h1 class="message-title">
+To You 🌸
+</h1>
+
+<p class="message">
+
+Happy Birthday Swastika Ji 🥳🎂💖<br><br>
+
+You are one of the most special people in my life.  
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨<br><br>
+
+May your every dream come true,  
+May happiness always stay with you,  
+And may your life always shine brighter than stars. 🌙💫<br><br>
+
+Thank you for being so amazing and making life more beautiful just by being in it. 💕<br><br>
+
+Always keep smiling, birthday girl 🌸
+
+</p>
+
+<button class="next-story-btn" onclick="startStory()">
+Next Surprise 🎁
+</button>
+
+</div>
+
+<!-- STORY PAGE 1 -->
+
+<section class="page story-page bg1" id="story1">
+
+<h1 class="main-title">
+Hey Birthday Girl ✨
+</h1>
+
+<div class="subtitle">
+Do You Know Me? 💖
+</div>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="nextPage(2)">
+Yea 😌
+</button>
+
+<button class="btn btn2" onclick="nextPage(2)">
+Ofcourse 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- STORY PAGE 2 -->
+
+<section class="page story-page bg2" id="story2">
+
+<div class="fancy">
+Dear Swastika Ji 🌸
+</div>
+
+<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
+🎂 Born On 13 May 🎂
+</div>
+
+<div class="text">
+
+Today is not just a normal day... 💫<br><br>
+
+Today the world became more beautiful because someone special was born. ✨<br><br>
+
+Your smile has that magical vibe which can make any bad day feel perfect. 🌹
+
+</div>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next ➜
+</button>
+
+</section>
+
+<!-- STORY PAGE 3 -->
+
+<section class="page story-page bg3" id="story3">
+
+<h1 class="final-msg">
+A Little Truth 💖
+</h1>
+
+<div class="text">
+
+Some people enter life normally...<br><br>
+
+But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
+
+And honestly... you are one of them.
+
+</div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Continue 💫
+</button>
+
+</section>
+
+<!-- STORY PAGE 4 -->
+
+<section class="page story-page bg4" id="story4">
+
+<h1 class="final-msg" style="color:#ff1493;">
+Your Vibes 🌷
+</h1>
+
+<div class="text" style="color:#222;">
+
+✨ Cute Smile<br>
+✨ Pure Heart<br>
+✨ Beautiful Nature<br>
+✨ Positive Energy<br>
+✨ And that adorable personality...<br><br>
+
+Everything about you feels special 🌸
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+One More Thing 💌
+</button>
+
+</section>
+
+<!-- STORY PAGE 5 -->
+
+<section class="page story-page bg5" id="story5">
+
+<h1 class="final-msg" style="color:#ffd700;">
+Birthday Wish 🎂
+</h1>
+
+<div class="text">
+
+I wish your every dream becomes reality ✨<br><br>
+
+May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
+
+And whenever life gets difficult...<br>
+
+Always remember that you are stronger and more amazing than you think 💫
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Final Surprise 🎁
+</button>
+
+</section>
+
+<!-- STORY PAGE 6 -->
+
+<section class="page story-page bg6" id="story6">
+
+<div class="final-msg" id="typingText"></div>
+
+<div class="text" id="animatedWish"
+style="font-family:'Dancing Script',cursive;
+font-size:2.2rem;
+opacity:0;
+transition:1s;">
+
+Keep Smiling 🌸<br>
+Keep Shining ✨<br>
+Keep Being Amazing 💖<br><br>
+
+Because people like you make the world beautiful 🌍
+
+</div>
+
+<div class="signature">
+
+— Made With Endless Efforts & Good Wishes 💫<br><br>
+
+<span style="font-size:2rem;color:#fff176;">
+By AMIT ✨
+</span>
+
+</div>
+
+</section>
+
+<script>
+
+/* STARS */
+
+let starsContainer = document.querySelector('.stars');
+
+for(let i=0;i<80;i++){
+
+let star = document.createElement('span');
+
+star.classList.add('star');
+
+star.style.left = Math.random()*100 + '%';
+
+star.style.top = Math.random()*100 + '%';
+
+star.style.animationDuration = (Math.random()*5+5)+'s';
+
+starsContainer.appendChild(star);
+
+}
+
+/* HEARTS */
+
+let heartsContainer = document.querySelector('.hearts');
+
+for(let i=0;i<40;i++){
+
+let heart = document.createElement('span');
+
+heart.innerHTML='💖';
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*6+4)+'s';
+
+heart.style.fontSize=(Math.random()*20+10)+'px';
+
+heartsContainer.appendChild(heart);
+
+}
+
+/* PAGE OPEN */
+
+function openPage(){
+
+document.getElementById('page1').style.display='none';
+
+document.getElementById('page2').style.display='block';
+
+}
+
+/* MESSAGE BOX */
+
+let openBtn = document.getElementById('openMessage');
+
+let closeBtn = document.getElementById('closeBox');
+
+let messageBox = document.getElementById('messageBox');
+
+openBtn.onclick = () => {
+
+messageBox.classList.add('active');
+
+}
+
+closeBtn.onclick = () => {
+
+messageBox.classList.remove('active');
+
+}
+
+/* START STORY */
+
+function startStory(){
+
+messageBox.style.display='none';
+
+document.getElementById('page2').style.display='none';
+
+document.getElementById('story1').style.display='flex';
+
+}
+
+/* NEXT STORY */
+
+function nextPage(num){
+
+document.querySelectorAll('.story-page').forEach(page=>{
+
+page.style.display='none';
+
+});
+
+document.getElementById('story'+num).style.display='flex';
+
+if(num===6){
+
+startTyping();
+
+}
+
+}
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+let text = "Happy Birthday Swastika Ji 🎉";
+
+let i = 0;
+
+let typing = document.getElementById("typingText");
+
+typing.innerHTML = "";
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}else{
+
+document.getElementById('animatedWish').style.opacity='1';
+
+}
+
+}
+
+type();
+
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Swastika Ji 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&family=Cinzel:wght@500&family=Great+Vibes&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#050816;
+font-family:'Poppins',sans-serif;
+}
+
+/* ================= PAGE COMMON ================= */
+
+.page{
+width:100%;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+background:
+linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle linear infinite;
+opacity:.7;
+}
+
+@keyframes twinkle{
+
+0%{
+transform:translateY(0px);
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:.1;
+}
+
+}
+
+.main-title{
+
+font-size:5rem;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 20px #ff4d9d;
+
+z-index:10;
+
+text-align:center;
+
+}
+
+.subtitle{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:white;
+
+z-index:10;
+
+}
+
+.option-box{
+
+margin-top:50px;
+
+display:flex;
+
+gap:30px;
+
+z-index:10;
+
+}
+
+.btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:bold;
+
+transition:.4s;
+
+color:white;
+
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.btn1{
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+box-shadow:0 0 25px #ff4d6d;
+
+}
+
+.btn2{
+
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+
+box-shadow:0 0 25px #3a86ff;
+
+}
+
+/* ================= PAGE 2 ================= */
+
+#page2{
+
+display:none;
+
+background:
+linear-gradient(135deg,#120b24,#29104a,#0c1f36);
+
+overflow-y:auto;
+
+padding-bottom:80px;
+
+}
+
+.banner{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:20px;
+
+}
+
+.banner img{
+
+width:140px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:60px;
+
+flex-wrap:wrap;
+
+padding:40px;
+
+}
+
+.left{
+text-align:center;
+}
+
+.happy{
+
+font-size:5rem;
+
+font-family:'Pacifico',cursive;
+
+color:#ff7eb3;
+
+}
+
+.birthday{
+
+font-size:6rem;
+
+font-family:'Dancing Script',cursive;
+
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.date{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:#ffe066;
+
+}
+
+.mail-btn{
+
+margin-top:30px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+background:linear-gradient(45deg,#ff006e,#8338ec);
+
+color:white;
+
+box-shadow:0 0 25px #ff006e;
+
+transition:.4s;
+
+}
+
+.mail-btn:hover{
+transform:scale(1.08);
+}
+
+.card{
+
+width:320px;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+}
+
+.name{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffd6ff;
+
+}
+
+.circle{
+
+width:160px;
+height:160px;
+
+border:4px dashed #ffb3c6;
+
+border-radius:50%;
+
+position:absolute;
+
+top:-40px;
+right:-40px;
+
+animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.circle::before{
+
+content:'💖';
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:2rem;
+
+}
+
+/* HEARTS */
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.hearts span{
+
+position:absolute;
+
+font-size:20px;
+
+animation:heartMove linear infinite;
+
+}
+
+@keyframes heartMove{
+
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+width:90%;
+max-width:750px;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,255,255,.2);
+
+transition:.5s;
+
+z-index:999;
+
+text-align:center;
+
+}
+
+.message-box.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.close{
+
+position:absolute;
+
+right:25px;
+top:20px;
+
+font-size:1.5rem;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message-title{
+
+font-size:3rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffb3c6;
+
+margin-bottom:20px;
+
+}
+
+.message{
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+}
+
+.next-story-btn{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4d6d,#8338ec);
+
+color:white;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+box-shadow:0 0 25px #ff4d6d;
+
+transition:.4s;
+
+}
+
+.next-story-btn:hover{
+transform:scale(1.08);
+}
+
+/* ================= STORY PAGES ================= */
+
+.story-page{
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+z-index:9999;
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(1.05);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.bg1{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+}
+
+.bg2{
+background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
+}
+
+.bg3{
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.bg4{
+background:linear-gradient(135deg,#ee9ca7,#ffdde1);
+}
+
+.bg5{
+background:linear-gradient(135deg,#232526,#414345);
+}
+
+.bg6{
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.fancy{
+
+font-size:4rem;
+
+font-family:'Dancing Script',cursive;
+
+color:#fff5a5;
+
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:1.4rem;
+
+line-height:2.2rem;
+
+max-width:850px;
+
+color:white;
+
+}
+
+.next-btn{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:1rem;
+
+font-weight:bold;
+
+}
+
+.final-msg{
+
+font-size:3.5rem;
+
+font-family:'Pacifico',cursive;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+font-size:3rem;
+}
+
+.subtitle{
+font-size:1.3rem;
+}
+
+.option-box{
+flex-direction:column;
+}
+
+.happy{
+font-size:3rem;
+}
+
+.birthday{
+font-size:4rem;
+}
+
+.banner img{
+width:100px;
+}
+
+.card{
+width:280px;
+}
+
+.fancy{
+font-size:2.5rem;
+}
+
+.text{
+font-size:1.1rem;
+line-height:1.8rem;
+}
+
+.final-msg{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+<div class="stars"></div>
+
+<h1 class="main-title">
+Hey Birthday Girl 💖
+</h1>
+
+<h2 class="subtitle">
+DO YOU KNOW ME?
+</h2>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="openPage()">
+Yea ✨
+</button>
+
+<button class="btn btn2" onclick="openPage()">
+Ofcourse 💫
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<div class="hearts"></div>
+
+<div class="banner">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+</div>
+
+<div class="hero">
+
+<div class="left">
+
+<h1 class="happy">Happy</h1>
+
+<h1 class="birthday">Birthday</h1>
+
+<div class="date">
+🎂 13 May ✨
+</div>
+
+<button class="mail-btn" id="openMessage">
+Click Here Swastika Ji 💌
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle"></div>
+
+<img src="https://i.pinimg.com/736x/87/ea/e8/87eae89dc58f2e19d71fa8d78c35f5c.jpg">
+
+<div class="name">
+Dear Swastika Ji 💖
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE BOX -->
+
+<div class="message-box" id="messageBox">
+
+<div class="close" id="closeBox">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<h1 class="message-title">
+To You 🌸
+</h1>
+
+<p class="message">
+
+Happy Birthday Swastika Ji 🥳🎂💖<br><br>
+
+You are one of the most special people in my life.  
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨<br><br>
+
+May your every dream come true,  
+May happiness always stay with you,  
+And may your life always shine brighter than stars. 🌙💫<br><br>
+
+Thank you for being so amazing and making life more beautiful just by being in it. 💕<br><br>
+
+Always keep smiling, birthday girl 🌸
+
+</p>
+
+<button class="next-story-btn" onclick="startStory()">
+Next Surprise 🎁
+</button>
+
+</div>
+
+<!-- STORY PAGE 1 -->
+
+<section class="page story-page bg1" id="story1">
+
+<h1 class="main-title">
+Hey Birthday Girl ✨
+</h1>
+
+<div class="subtitle">
+Do You Know Me? 💖
+</div>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="nextPage(2)">
+Yea 😌
+</button>
+
+<button class="btn btn2" onclick="nextPage(2)">
+Ofcourse 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- STORY PAGE 2 -->
+
+<section class="page story-page bg2" id="story2">
+
+<div class="fancy">
+Dear Swastika Ji 🌸
+</div>
+
+<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
+🎂 Born On 13 May 🎂
+</div>
+
+<div class="text">
+
+Today is not just a normal day... 💫<br><br>
+
+Today the world became more beautiful because someone special was born. ✨<br><br>
+
+Your smile has that magical vibe which can make any bad day feel perfect. 🌹
+
+</div>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next ➜
+</button>
+
+</section>
+
+<!-- STORY PAGE 3 -->
+
+<section class="page story-page bg3" id="story3">
+
+<h1 class="final-msg">
+A Little Truth 💖
+</h1>
+
+<div class="text">
+
+Some people enter life normally...<br><br>
+
+But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
+
+And honestly... you are one of them.
+
+</div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Continue 💫
+</button>
+
+</section>
+
+<!-- STORY PAGE 4 -->
+
+<section class="page story-page bg4" id="story4">
+
+<h1 class="final-msg" style="color:#ff1493;">
+Your Vibes 🌷
+</h1>
+
+<div class="text" style="color:#222;">
+
+✨ Cute Smile<br>
+✨ Pure Heart<br>
+✨ Beautiful Nature<br>
+✨ Positive Energy<br>
+✨ And that adorable personality...<br><br>
+
+Everything about you feels special 🌸
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+One More Thing 💌
+</button>
+
+</section>
+
+<!-- STORY PAGE 5 -->
+
+<section class="page story-page bg5" id="story5">
+
+<h1 class="final-msg" style="color:#ffd700;">
+Birthday Wish 🎂
+</h1>
+
+<div class="text">
+
+I wish your every dream becomes reality ✨<br><br>
+
+May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
+
+And whenever life gets difficult...<br>
+
+Always remember that you are stronger and more amazing than you think 💫
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Final Surprise 🎁
+</button>
+
+</section>
+
+<!-- STORY PAGE 6 -->
+
+<section class="page story-page bg6" id="story6">
+
+<div class="final-msg" id="typingText"></div>
+
+<div class="text" id="animatedWish"
+style="font-family:'Dancing Script',cursive;
+font-size:2.2rem;
+opacity:0;
+transition:1s;">
+
+Keep Smiling 🌸<br>
+Keep Shining ✨<br>
+Keep Being Amazing 💖<br><br>
+
+Because people like you make the world beautiful 🌍
+
+</div>
+
+<div class="signature">
+
+— Made With Endless Efforts & Good Wishes 💫<br><br>
+
+<span style="font-size:2rem;color:#fff176;">
+By AMIT ✨
+</span>
+
+</div>
+
+</section>
+
+<script>
+
+/* STARS */
+
+let starsContainer = document.querySelector('.stars');
+
+for(let i=0;i<80;i++){
+
+let star = document.createElement('span');
+
+star.classList.add('star');
+
+star.style.left = Math.random()*100 + '%';
+
+star.style.top = Math.random()*100 + '%';
+
+star.style.animationDuration = (Math.random()*5+5)+'s';
+
+starsContainer.appendChild(star);
+
+}
+
+/* HEARTS */
+
+let heartsContainer = document.querySelector('.hearts');
+
+for(let i=0;i<40;i++){
+
+let heart = document.createElement('span');
+
+heart.innerHTML='💖';
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*6+4)+'s';
+
+heart.style.fontSize=(Math.random()*20+10)+'px';
+
+heartsContainer.appendChild(heart);
+
+}
+
+/* PAGE OPEN */
+
+function openPage(){
+
+document.getElementById('page1').style.display='none';
+
+document.getElementById('page2').style.display='block';
+
+}
+
+/* MESSAGE BOX */
+
+let openBtn = document.getElementById('openMessage');
+
+let closeBtn = document.getElementById('closeBox');
+
+let messageBox = document.getElementById('messageBox');
+
+openBtn.onclick = () => {
+
+messageBox.classList.add('active');
+
+}
+
+closeBtn.onclick = () => {
+
+messageBox.classList.remove('active');
+
+}
+
+/* START STORY */
+
+function startStory(){
+
+messageBox.style.display='none';
+
+document.getElementById('page2').style.display='none';
+
+document.getElementById('story1').style.display='flex';
+
+}
+
+/* NEXT STORY */
+
+function nextPage(num){
+
+document.querySelectorAll('.story-page').forEach(page=>{
+
+page.style.display='none';
+
+});
+
+document.getElementById('story'+num).style.display='flex';
+
+if(num===6){
+
+startTyping();
+
+}
+
+}
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+let text = "Happy Birthday Swastika Ji 🎉";
+
+let i = 0;
+
+let typing = document.getElementById("typingText");
+
+typing.innerHTML = "";
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}else{
+
+document.getElementById('animatedWish').style.opacity='1';
+
+}
+
+}
+
+type();
+
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Swastika Ji 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&family=Cinzel:wght@500&family=Great+Vibes&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#050816;
+font-family:'Poppins',sans-serif;
+}
+
+/* ================= PAGE COMMON ================= */
+
+.page{
+width:100%;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+background:
+linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle linear infinite;
+opacity:.7;
+}
+
+@keyframes twinkle{
+
+0%{
+transform:translateY(0px);
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:.1;
+}
+
+}
+
+.main-title{
+
+font-size:5rem;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 20px #ff4d9d;
+
+z-index:10;
+
+text-align:center;
+
+}
+
+.subtitle{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:white;
+
+z-index:10;
+
+}
+
+.option-box{
+
+margin-top:50px;
+
+display:flex;
+
+gap:30px;
+
+z-index:10;
+
+}
+
+.btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:bold;
+
+transition:.4s;
+
+color:white;
+
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.btn1{
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+box-shadow:0 0 25px #ff4d6d;
+
+}
+
+.btn2{
+
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+
+box-shadow:0 0 25px #3a86ff;
+
+}
+
+/* ================= PAGE 2 ================= */
+
+#page2{
+
+display:none;
+
+background:
+linear-gradient(135deg,#120b24,#29104a,#0c1f36);
+
+overflow-y:auto;
+
+padding-bottom:80px;
+
+}
+
+.banner{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:20px;
+
+}
+
+.banner img{
+
+width:140px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:60px;
+
+flex-wrap:wrap;
+
+padding:40px;
+
+}
+
+.left{
+text-align:center;
+}
+
+.happy{
+
+font-size:5rem;
+
+font-family:'Pacifico',cursive;
+
+color:#ff7eb3;
+
+}
+
+.birthday{
+
+font-size:6rem;
+
+font-family:'Dancing Script',cursive;
+
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.date{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:#ffe066;
+
+}
+
+.mail-btn{
+
+margin-top:30px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+background:linear-gradient(45deg,#ff006e,#8338ec);
+
+color:white;
+
+box-shadow:0 0 25px #ff006e;
+
+transition:.4s;
+
+}
+
+.mail-btn:hover{
+transform:scale(1.08);
+}
+
+.card{
+
+width:320px;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+}
+
+.name{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffd6ff;
+
+}
+
+.circle{
+
+width:160px;
+height:160px;
+
+border:4px dashed #ffb3c6;
+
+border-radius:50%;
+
+position:absolute;
+
+top:-40px;
+right:-40px;
+
+animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.circle::before{
+
+content:'💖';
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:2rem;
+
+}
+
+/* HEARTS */
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.hearts span{
+
+position:absolute;
+
+font-size:20px;
+
+animation:heartMove linear infinite;
+
+}
+
+@keyframes heartMove{
+
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+width:90%;
+max-width:750px;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,255,255,.2);
+
+transition:.5s;
+
+z-index:999;
+
+text-align:center;
+
+}
+
+.message-box.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.close{
+
+position:absolute;
+
+right:25px;
+top:20px;
+
+font-size:1.5rem;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message-title{
+
+font-size:3rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffb3c6;
+
+margin-bottom:20px;
+
+}
+
+.message{
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+}
+
+.next-story-btn{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4d6d,#8338ec);
+
+color:white;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+box-shadow:0 0 25px #ff4d6d;
+
+transition:.4s;
+
+}
+
+.next-story-btn:hover{
+transform:scale(1.08);
+}
+
+/* ================= STORY PAGES ================= */
+
+.story-page{
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+z-index:9999;
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(1.05);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.bg1{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+}
+
+.bg2{
+background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
+}
+
+.bg3{
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.bg4{
+background:linear-gradient(135deg,#ee9ca7,#ffdde1);
+}
+
+.bg5{
+background:linear-gradient(135deg,#232526,#414345);
+}
+
+.bg6{
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.fancy{
+
+font-size:4rem;
+
+font-family:'Dancing Script',cursive;
+
+color:#fff5a5;
+
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:1.4rem;
+
+line-height:2.2rem;
+
+max-width:850px;
+
+color:white;
+
+}
+
+.next-btn{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:1rem;
+
+font-weight:bold;
+
+}
+
+.final-msg{
+
+font-size:3.5rem;
+
+font-family:'Pacifico',cursive;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+font-size:3rem;
+}
+
+.subtitle{
+font-size:1.3rem;
+}
+
+.option-box{
+flex-direction:column;
+}
+
+.happy{
+font-size:3rem;
+}
+
+.birthday{
+font-size:4rem;
+}
+
+.banner img{
+width:100px;
+}
+
+.card{
+width:280px;
+}
+
+.fancy{
+font-size:2.5rem;
+}
+
+.text{
+font-size:1.1rem;
+line-height:1.8rem;
+}
+
+.final-msg{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+<div class="stars"></div>
+
+<h1 class="main-title">
+Hey Birthday Girl 💖
+</h1>
+
+<h2 class="subtitle">
+DO YOU KNOW ME?
+</h2>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="openPage()">
+Yea ✨
+</button>
+
+<button class="btn btn2" onclick="openPage()">
+Ofcourse 💫
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<div class="hearts"></div>
+
+<div class="banner">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+</div>
+
+<div class="hero">
+
+<div class="left">
+
+<h1 class="happy">Happy</h1>
+
+<h1 class="birthday">Birthday</h1>
+
+<div class="date">
+🎂 13 May ✨
+</div>
+
+<button class="mail-btn" id="openMessage">
+Click Here Swastika Ji 💌
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle"></div>
+
+<img src="https://i.pinimg.com/736x/87/ea/e8/87eae89dc58f2e19d71fa8d78c35f5c.jpg">
+
+<div class="name">
+Dear Swastika Ji 💖
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE BOX -->
+
+<div class="message-box" id="messageBox">
+
+<div class="close" id="closeBox">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<h1 class="message-title">
+To You 🌸
+</h1>
+
+<p class="message">
+
+Happy Birthday Swastika Ji 🥳🎂💖<br><br>
+
+You are one of the most special people in my life.  
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨<br><br>
+
+May your every dream come true,  
+May happiness always stay with you,  
+And may your life always shine brighter than stars. 🌙💫<br><br>
+
+Thank you for being so amazing and making life more beautiful just by being in it. 💕<br><br>
+
+Always keep smiling, birthday girl 🌸
+
+</p>
+
+<button class="next-story-btn" onclick="startStory()">
+Next Surprise 🎁
+</button>
+
+</div>
+
+<!-- STORY PAGE 1 -->
+
+<section class="page story-page bg1" id="story1">
+
+<h1 class="main-title">
+Hey Birthday Girl ✨
+</h1>
+
+<div class="subtitle">
+Do You Know Me? 💖
+</div>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="nextPage(2)">
+Yea 😌
+</button>
+
+<button class="btn btn2" onclick="nextPage(2)">
+Ofcourse 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- STORY PAGE 2 -->
+
+<section class="page story-page bg2" id="story2">
+
+<div class="fancy">
+Dear Swastika Ji 🌸
+</div>
+
+<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
+🎂 Born On 13 May 🎂
+</div>
+
+<div class="text">
+
+Today is not just a normal day... 💫<br><br>
+
+Today the world became more beautiful because someone special was born. ✨<br><br>
+
+Your smile has that magical vibe which can make any bad day feel perfect. 🌹
+
+</div>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next ➜
+</button>
+
+</section>
+
+<!-- STORY PAGE 3 -->
+
+<section class="page story-page bg3" id="story3">
+
+<h1 class="final-msg">
+A Little Truth 💖
+</h1>
+
+<div class="text">
+
+Some people enter life normally...<br><br>
+
+But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
+
+And honestly... you are one of them.
+
+</div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Continue 💫
+</button>
+
+</section>
+
+<!-- STORY PAGE 4 -->
+
+<section class="page story-page bg4" id="story4">
+
+<h1 class="final-msg" style="color:#ff1493;">
+Your Vibes 🌷
+</h1>
+
+<div class="text" style="color:#222;">
+
+✨ Cute Smile<br>
+✨ Pure Heart<br>
+✨ Beautiful Nature<br>
+✨ Positive Energy<br>
+✨ And that adorable personality...<br><br>
+
+Everything about you feels special 🌸
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+One More Thing 💌
+</button>
+
+</section>
+
+<!-- STORY PAGE 5 -->
+
+<section class="page story-page bg5" id="story5">
+
+<h1 class="final-msg" style="color:#ffd700;">
+Birthday Wish 🎂
+</h1>
+
+<div class="text">
+
+I wish your every dream becomes reality ✨<br><br>
+
+May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
+
+And whenever life gets difficult...<br>
+
+Always remember that you are stronger and more amazing than you think 💫
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Final Surprise 🎁
+</button>
+
+</section>
+
+<!-- STORY PAGE 6 -->
+
+<section class="page story-page bg6" id="story6">
+
+<div class="final-msg" id="typingText"></div>
+
+<div class="text" id="animatedWish"
+style="font-family:'Dancing Script',cursive;
+font-size:2.2rem;
+opacity:0;
+transition:1s;">
+
+Keep Smiling 🌸<br>
+Keep Shining ✨<br>
+Keep Being Amazing 💖<br><br>
+
+Because people like you make the world beautiful 🌍
+
+</div>
+
+<div class="signature">
+
+— Made With Endless Efforts & Good Wishes 💫<br><br>
+
+<span style="font-size:2rem;color:#fff176;">
+By AMIT ✨
+</span>
+
+</div>
+
+</section>
+
+<script>
+
+/* STARS */
+
+let starsContainer = document.querySelector('.stars');
+
+for(let i=0;i<80;i++){
+
+let star = document.createElement('span');
+
+star.classList.add('star');
+
+star.style.left = Math.random()*100 + '%';
+
+star.style.top = Math.random()*100 + '%';
+
+star.style.animationDuration = (Math.random()*5+5)+'s';
+
+starsContainer.appendChild(star);
+
+}
+
+/* HEARTS */
+
+let heartsContainer = document.querySelector('.hearts');
+
+for(let i=0;i<40;i++){
+
+let heart = document.createElement('span');
+
+heart.innerHTML='💖';
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*6+4)+'s';
+
+heart.style.fontSize=(Math.random()*20+10)+'px';
+
+heartsContainer.appendChild(heart);
+
+}
+
+/* PAGE OPEN */
+
+function openPage(){
+
+document.getElementById('page1').style.display='none';
+
+document.getElementById('page2').style.display='block';
+
+}
+
+/* MESSAGE BOX */
+
+let openBtn = document.getElementById('openMessage');
+
+let closeBtn = document.getElementById('closeBox');
+
+let messageBox = document.getElementById('messageBox');
+
+openBtn.onclick = () => {
+
+messageBox.classList.add('active');
+
+}
+
+closeBtn.onclick = () => {
+
+messageBox.classList.remove('active');
+
+}
+
+/* START STORY */
+
+function startStory(){
+
+messageBox.style.display='none';
+
+document.getElementById('page2').style.display='none';
+
+document.getElementById('story1').style.display='flex';
+
+}
+
+/* NEXT STORY */
+
+function nextPage(num){
+
+document.querySelectorAll('.story-page').forEach(page=>{
+
+page.style.display='none';
+
+});
+
+document.getElementById('story'+num).style.display='flex';
+
+if(num===6){
+
+startTyping();
+
+}
+
+}
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+let text = "Happy Birthday Swastika Ji 🎉";
+
+let i = 0;
+
+let typing = document.getElementById("typingText");
+
+typing.innerHTML = "";
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}else{
+
+document.getElementById('animatedWish').style.opacity='1';
+
+}
+
+}
+
+type();
+
+}
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Swastika Ji 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&family=Cinzel:wght@500&family=Great+Vibes&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#050816;
+font-family:'Poppins',sans-serif;
+}
+
+/* ================= PAGE COMMON ================= */
+
+.page{
+width:100%;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+background:
+linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle linear infinite;
+opacity:.7;
+}
+
+@keyframes twinkle{
+
+0%{
+transform:translateY(0px);
+opacity:.3;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:.1;
+}
+
+}
+
+.main-title{
+
+font-size:5rem;
+
+font-family:'Great Vibes',cursive;
+
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 20px #ff4d9d;
+
+z-index:10;
+
+text-align:center;
+
+}
+
+.subtitle{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:white;
+
+z-index:10;
+
+}
+
+.option-box{
+
+margin-top:50px;
+
+display:flex;
+
+gap:30px;
+
+z-index:10;
+
+}
+
+.btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:bold;
+
+transition:.4s;
+
+color:white;
+
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.btn1{
+
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+
+box-shadow:0 0 25px #ff4d6d;
+
+}
+
+.btn2{
+
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+
+box-shadow:0 0 25px #3a86ff;
+
+}
+
+/* ================= PAGE 2 ================= */
+
+#page2{
+
+display:none;
+
+background:
+linear-gradient(135deg,#120b24,#29104a,#0c1f36);
+
+overflow-y:auto;
+
+padding-bottom:80px;
+
+}
+
+.banner{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:20px;
+
+}
+
+.banner img{
+
+width:140px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:60px;
+
+flex-wrap:wrap;
+
+padding:40px;
+
+}
+
+.left{
+text-align:center;
+}
+
+.happy{
+
+font-size:5rem;
+
+font-family:'Pacifico',cursive;
+
+color:#ff7eb3;
+
+}
+
+.birthday{
+
+font-size:6rem;
+
+font-family:'Dancing Script',cursive;
+
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.date{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Cinzel',serif;
+
+color:#ffe066;
+
+}
+
+.mail-btn{
+
+margin-top:30px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+background:linear-gradient(45deg,#ff006e,#8338ec);
+
+color:white;
+
+box-shadow:0 0 25px #ff006e;
+
+transition:.4s;
+
+}
+
+.mail-btn:hover{
+transform:scale(1.08);
+}
+
+.card{
+
+width:320px;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+}
+
+.name{
+
+margin-top:20px;
+
+font-size:2rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffd6ff;
+
+}
+
+.circle{
+
+width:160px;
+height:160px;
+
+border:4px dashed #ffb3c6;
+
+border-radius:50%;
+
+position:absolute;
+
+top:-40px;
+right:-40px;
+
+animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+.circle::before{
+
+content:'💖';
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:2rem;
+
+}
+
+/* HEARTS */
+
+.hearts{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.hearts span{
+
+position:absolute;
+
+font-size:20px;
+
+animation:heartMove linear infinite;
+
+}
+
+@keyframes heartMove{
+
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+width:90%;
+max-width:750px;
+
+padding:30px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,255,255,.2);
+
+transition:.5s;
+
+z-index:999;
+
+text-align:center;
+
+}
+
+.message-box.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.close{
+
+position:absolute;
+
+right:25px;
+top:20px;
+
+font-size:1.5rem;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.message-title{
+
+font-size:3rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffb3c6;
+
+margin-bottom:20px;
+
+}
+
+.message{
+
+font-size:1.2rem;
+
+line-height:2;
+
+color:white;
+
+}
+
+.next-story-btn{
+
+margin-top:30px;
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff4d6d,#8338ec);
+
+color:white;
+
+font-size:1rem;
+
+font-family:'Montserrat';
+
+font-weight:bold;
+
+box-shadow:0 0 25px #ff4d6d;
+
+transition:.4s;
+
+}
+
+.next-story-btn:hover{
+transform:scale(1.08);
+}
+
+/* ================= STORY PAGES ================= */
+
+.story-page{
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+padding:30px;
+
+text-align:center;
+
+z-index:9999;
+
+animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:scale(1.05);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.bg1{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+}
+
+.bg2{
+background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
+}
+
+.bg3{
+background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+.bg4{
+background:linear-gradient(135deg,#ee9ca7,#ffdde1);
+}
+
+.bg5{
+background:linear-gradient(135deg,#232526,#414345);
+}
+
+.bg6{
+background:linear-gradient(135deg,#1d2671,#c33764);
+}
+
+.fancy{
+
+font-size:4rem;
+
+font-family:'Dancing Script',cursive;
+
+color:#fff5a5;
+
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:1.4rem;
+
+line-height:2.2rem;
+
+max-width:850px;
+
+color:white;
+
+}
+
+.next-btn{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+background:white;
+
+font-size:1rem;
+
+font-weight:bold;
+
+}
+
+.final-msg{
+
+font-size:3.5rem;
+
+font-family:'Pacifico',cursive;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.signature{
+
+margin-top:25px;
+
+font-size:1.5rem;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-title{
+font-size:3rem;
+}
+
+.subtitle{
+font-size:1.3rem;
+}
+
+.option-box{
+flex-direction:column;
+}
+
+.happy{
+font-size:3rem;
+}
+
+.birthday{
+font-size:4rem;
+}
+
+.banner img{
+width:100px;
+}
+
+.card{
+width:280px;
+}
+
+.fancy{
+font-size:2.5rem;
+}
+
+.text{
+font-size:1.1rem;
+line-height:1.8rem;
+}
+
+.final-msg{
+font-size:2.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page">
+
+<div class="stars"></div>
+
+<h1 class="main-title">
+Hey Birthday Girl 💖
+</h1>
+
+<h2 class="subtitle">
+DO YOU KNOW ME?
+</h2>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="openPage()">
+Yea ✨
+</button>
+
+<button class="btn btn2" onclick="openPage()">
+Ofcourse 💫
+</button>
+
+</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<div class="hearts"></div>
+
+<div class="banner">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+</div>
+
+<div class="hero">
+
+<div class="left">
+
+<h1 class="happy">Happy</h1>
+
+<h1 class="birthday">Birthday</h1>
+
+<div class="date">
+🎂 13 May ✨
+</div>
+
+<button class="mail-btn" id="openMessage">
+Click Here Swastika Ji 💌
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle"></div>
+
+<img src="https://i.pinimg.com/736x/87/ea/e8/87eae89dc58f2e19d71fa8d78c35f5c.jpg">
+
+<div class="name">
+Dear Swastika Ji 💖
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE BOX -->
+
+<div class="message-box" id="messageBox">
+
+<div class="close" id="closeBox">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<h1 class="message-title">
+To You 🌸
+</h1>
+
+<p class="message">
+
+Happy Birthday Swastika Ji 🥳🎂💖<br><br>
+
+You are one of the most special people in my life.  
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨<br><br>
+
+May your every dream come true,  
+May happiness always stay with you,  
+And may your life always shine brighter than stars. 🌙💫<br><br>
+
+Thank you for being so amazing and making life more beautiful just by being in it. 💕<br><br>
+
+Always keep smiling, birthday girl 🌸
+
+</p>
+
+<button class="next-story-btn" onclick="startStory()">
+Next Surprise 🎁
+</button>
+
+</div>
+
+<!-- STORY PAGE 1 -->
+
+<section class="page story-page bg1" id="story1">
+
+<h1 class="main-title">
+Hey Birthday Girl ✨
+</h1>
+
+<div class="subtitle">
+Do You Know Me? 💖
+</div>
+
+<div class="option-box">
+
+<button class="btn btn1" onclick="nextPage(2)">
+Yea 😌
+</button>
+
+<button class="btn btn2" onclick="nextPage(2)">
+Ofcourse 😎
+</button>
+
+</div>
+
+</section>
+
+<!-- STORY PAGE 2 -->
+
+<section class="page story-page bg2" id="story2">
+
+<div class="fancy">
+Dear Swastika Ji 🌸
+</div>
+
+<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
+🎂 Born On 13 May 🎂
+</div>
+
+<div class="text">
+
+Today is not just a normal day... 💫<br><br>
+
+Today the world became more beautiful because someone special was born. ✨<br><br>
+
+Your smile has that magical vibe which can make any bad day feel perfect. 🌹
+
+</div>
+
+<button class="next-btn" onclick="nextPage(3)">
+Next ➜
+</button>
+
+</section>
+
+<!-- STORY PAGE 3 -->
+
+<section class="page story-page bg3" id="story3">
+
+<h1 class="final-msg">
+A Little Truth 💖
+</h1>
+
+<div class="text">
+
+Some people enter life normally...<br><br>
+
+But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
+
+And honestly... you are one of them.
+
+</div>
+
+<button class="next-btn" onclick="nextPage(4)">
+Continue 💫
+</button>
+
+</section>
+
+<!-- STORY PAGE 4 -->
+
+<section class="page story-page bg4" id="story4">
+
+<h1 class="final-msg" style="color:#ff1493;">
+Your Vibes 🌷
+</h1>
+
+<div class="text" style="color:#222;">
+
+✨ Cute Smile<br>
+✨ Pure Heart<br>
+✨ Beautiful Nature<br>
+✨ Positive Energy<br>
+✨ And that adorable personality...<br><br>
+
+Everything about you feels special 🌸
+
+</div>
+
+<button class="next-btn" onclick="nextPage(5)">
+One More Thing 💌
+</button>
+
+</section>
+
+<!-- STORY PAGE 5 -->
+
+<section class="page story-page bg5" id="story5">
+
+<h1 class="final-msg" style="color:#ffd700;">
+Birthday Wish 🎂
+</h1>
+
+<div class="text">
+
+I wish your every dream becomes reality ✨<br><br>
+
+May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
+
+And whenever life gets difficult...<br>
+
+Always remember that you are stronger and more amazing than you think 💫
+
+</div>
+
+<button class="next-btn" onclick="nextPage(6)">
+Final Surprise 🎁
+</button>
+
+</section>
+
+<!-- STORY PAGE 6 -->
+
+<section class="page story-page bg6" id="story6">
+
+<div class="final-msg" id="typingText"></div>
+
+<div class="text" id="animatedWish"
+style="font-family:'Dancing Script',cursive;
+font-size:2.2rem;
+opacity:0;
+transition:1s;">
+
+Keep Smiling 🌸<br>
+Keep Shining ✨<br>
+Keep Being Amazing 💖<br><br>
+
+Because people like you make the world beautiful 🌍
+
+</div>
+
+<div class="signature">
+
+— Made With Endless Efforts & Good Wishes 💫<br><br>
+
+<span style="font-size:2rem;color:#fff176;">
+By AMIT ✨
+</span>
+
+</div>
+
+</section>
+
+<script>
+
+/* STARS */
+
+let starsContainer = document.querySelector('.stars');
+
+for(let i=0;i<80;i++){
+
+let star = document.createElement('span');
+
+star.classList.add('star');
+
+star.style.left = Math.random()*100 + '%';
+
+star.style.top = Math.random()*100 + '%';
+
+star.style.animationDuration = (Math.random()*5+5)+'s';
+
+starsContainer.appendChild(star);
+
+}
+
+/* HEARTS */
+
+let heartsContainer = document.querySelector('.hearts');
+
+for(let i=0;i<40;i++){
+
+let heart = document.createElement('span');
+
+heart.innerHTML='💖';
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*6+4)+'s';
+
+heart.style.fontSize=(Math.random()*20+10)+'px';
+
+heartsContainer.appendChild(heart);
+
+}
+
+/* PAGE OPEN */
+
+function openPage(){
+
+document.getElementById('page1').style.display='none';
+
+document.getElementById('page2').style.display='block';
+
+}
+
+/* MESSAGE BOX */
+
+let openBtn = document.getElementById('openMessage');
+
+let closeBtn = document.getElementById('closeBox');
+
+let messageBox = document.getElementById('messageBox');
+
+openBtn.onclick = () => {
+
+messageBox.classList.add('active');
+
+}
+
+closeBtn.onclick = () => {
+
+messageBox.classList.remove('active');
+
+}
+
+/* START STORY */
+
+function startStory(){
+
+messageBox.style.display='none';
+
+document.getElementById('page2').style.display='none';
+
+document.getElementById('story1').style.display='flex';
+
+}
+
+/* NEXT STORY */
+
+function nextPage(num){
+
+document.querySelectorAll('.story-page').forEach(page=>{
+
+page.style.display='none';
+
+});
+
+document.getElementById('story'+num).style.display='flex';
+
+if(num===6){
+
+startTyping();
+
+}
+
+}
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+let text = "Happy Birthday Swastika Ji 🎉";
+
+let i = 0;
+
+let typing = document.getElementById("typingText");
+
+typing.innerHTML = "";
+
+function type(){
+
+if(i < text.length){
+
+typing.innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}else{
+
+document.getElementById('animatedWish').style.opacity='1';
+
+}
+
+}
+
+type();
 
 }
 
