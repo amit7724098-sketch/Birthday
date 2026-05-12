@@ -51,7 +51,7 @@
     }
 
     .bg2{
-      background:linear-gradient(135deg,#ff758c,#ff7eb3);
+      background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
     }
 
     .bg3{
@@ -227,7 +227,9 @@
 </div>
 
   </section>  <!-- PAGE 2 -->  <section class="page bg2" id="page2">
-    <div class="fancy">Dear Swastika Ji 🌸</div><div class="text">
+    <div class="fancy">Dear Swastika Ji 🌸</div><div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">🎂 Born On 13 May 🎂</div>
+
+<div class="text">
   Today is not just a normal day... 💫<br><br>
   Today the world became more beautiful because someone special was born. ✨<br><br>
   Your smile has that magical vibe which can make any bad day feel perfect. 🌹
@@ -267,7 +269,7 @@
 <button class="next-btn" onclick="nextPage(6)">Final Surprise 🎁</button>
 
   </section>  <!-- PAGE 6 -->  <section class="page bg6" id="page6">
-    <div class="final-msg">Happy Birthday Swastika Ji 🎉</div><div class="text" style="font-family:'Dancing Script',cursive;font-size:2.2rem;">
+    <div class="final-msg" id="typingText"></div><div class="text" id="animatedWish" style="font-family:'Dancing Script',cursive;font-size:2.2rem;opacity:0;transition:1s;">
   Keep Smiling 🌸<br>
   Keep Shining ✨<br>
   Keep Being Amazing 💖<br><br>
@@ -275,7 +277,8 @@
 </div>
 
 <div class="signature">
-  — Made With Endless Efforts & Good Wishes 💫
+  — Made With Endless Efforts & Good Wishes 💫<br><br>
+  <span style="font-size:2rem;color:#fff176;">By AMIT ✨</span>
 </div>
 
   </section>  <script>
@@ -312,6 +315,32 @@
     }
 
     createHearts();
+
+    const text = 'Happy Birthday Swastika Ji 🎉';
+    let i = 0;
+
+    function typeEffect(){
+      if(i < text.length){
+        document.getElementById('typingText').innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect,100);
+      }
+      else{
+        document.getElementById('animatedWish').style.opacity='1';
+      }
+    }
+
+    const observer = new MutationObserver(()=>{
+      const page6 = document.getElementById('page6');
+
+      if(page6.classList.contains('active')){
+        document.getElementById('typingText').innerHTML='';
+        i = 0;
+        typeEffect();
+      }
+    });
+
+    observer.observe(document.getElementById('page6'), {attributes:true});
 
   </script></body>
 </html>
