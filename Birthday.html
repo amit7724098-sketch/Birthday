@@ -41,7 +41,7 @@ transition:1s;
 overflow:hidden;
 }
 
-/* ================= FIRST PAGE ================= */
+/* ================= PAGE 1 ================= */
 
 #page1{
 background:
@@ -58,6 +58,7 @@ position:absolute;
 width:100%;
 height:100%;
 overflow:hidden;
+pointer-events:none;
 }
 
 .star{
@@ -84,6 +85,7 @@ background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
 -webkit-text-fill-color:transparent;
 animation:glow 2s infinite alternate;
 text-align:center;
+z-index:10;
 }
 
 @keyframes glow{
@@ -101,12 +103,14 @@ font-size:2rem;
 color:white;
 font-family:'Cinzel',serif;
 letter-spacing:2px;
+z-index:10;
 }
 
 .option-box{
 margin-top:50px;
 display:flex;
 gap:30px;
+z-index:100;
 }
 
 .btn{
@@ -118,6 +122,8 @@ font-size:1.1rem;
 font-family:'Montserrat',sans-serif;
 font-weight:700;
 transition:.4s;
+position:relative;
+z-index:100;
 }
 
 .btn1{
@@ -136,14 +142,21 @@ box-shadow:0 0 25px #3a86ff;
 transform:scale(1.12);
 }
 
-/* ================= SECOND PAGE ================= */
+/* ================= PAGE 2 ================= */
 
 #page2{
 background:
 linear-gradient(135deg,#120b24,#29104a,#0c1f36);
 display:none;
-overflow:auto;
+overflow-y:auto;
+overflow-x:hidden;
 padding-bottom:80px;
+height:100vh;
+width:100%;
+position:absolute;
+top:0;
+left:0;
+z-index:5;
 }
 
 .show{
@@ -169,7 +182,7 @@ padding:20px;
 }
 
 .banner img{
-width:250px;
+width:180px;
 animation:float 4s ease-in-out infinite;
 }
 
@@ -220,11 +233,11 @@ color:#ffe066;
 }
 
 .mail-btn{
-margin-top:40px;
+margin-top:30px;
 padding:18px 40px;
 border:none;
 border-radius:40px;
-font-size:1.2rem;
+font-size:1.1rem;
 cursor:pointer;
 background:linear-gradient(45deg,#ff006e,#8338ec);
 color:white;
@@ -243,7 +256,7 @@ position:relative;
 }
 
 .card{
-width:330px;
+width:320px;
 background:rgba(255,255,255,.08);
 backdrop-filter:blur(10px);
 padding:20px;
@@ -307,7 +320,7 @@ padding:30px;
 border-radius:30px;
 box-shadow:0 0 40px rgba(255,255,255,.2);
 transition:.5s;
-z-index:10;
+z-index:999;
 }
 
 .message-box.active{
@@ -339,6 +352,8 @@ font-family:'Poppins';
 text-align:center;
 }
 
+/* HEARTS */
+
 .hearts{
 position:absolute;
 width:100%;
@@ -367,89 +382,20 @@ opacity:0;
 }
 }
 
-/* ================= STORY PAGES ================= */
-
-.storyPage{
-display:none;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-padding:30px;
-text-align:center;
-animation:fadeIn 1s ease;
-}
-
-.activeStory{
-display:flex;
-}
-
-.bg1{
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-}
-
-.bg2{
-background:linear-gradient(135deg,#141e30,#243b55,#0f3460,#533483);
-}
-
-.bg3{
-background:linear-gradient(135deg,#141e30,#243b55);
-}
-
-.bg4{
-background:linear-gradient(135deg,#ee9ca7,#ffdde1);
-}
-
-.bg5{
-background:linear-gradient(135deg,#232526,#414345);
-}
-
-.bg6{
-background:linear-gradient(135deg,#1d2671,#c33764);
-}
-
-.fancy{
-font-size:4rem;
-font-family:'Dancing Script',cursive;
-color:#fff5a5;
-margin-bottom:20px;
-}
-
-.text{
-font-size:1.5rem;
-line-height:2.3rem;
-max-width:850px;
-color:white;
-}
-
-.next-btn{
-margin-top:40px;
-padding:15px 35px;
-border:none;
-border-radius:40px;
-font-size:1.1rem;
-cursor:pointer;
-background:white;
-font-weight:bold;
-}
-
-.final-msg{
-font-size:4rem;
-font-family:'Pacifico',cursive;
-color:white;
-margin-bottom:20px;
-}
-
-.signature{
-margin-top:25px;
-font-size:1.5rem;
-font-family:'Great Vibes',cursive;
-color:white;
-}
+/* MOBILE */
 
 @media(max-width:768px){
 
 .main-title{
 font-size:3rem;
+}
+
+.subtitle{
+font-size:1.4rem;
+}
+
+.option-box{
+flex-direction:column;
 }
 
 .happy{
@@ -460,21 +406,12 @@ font-size:3rem;
 font-size:4rem;
 }
 
-.option-box{
-flex-direction:column;
+.banner img{
+width:120px;
 }
 
-.fancy{
-font-size:2.5rem;
-}
-
-.text{
-font-size:1.1rem;
-line-height:1.8rem;
-}
-
-.final-msg{
-font-size:2.5rem;
+.card{
+width:280px;
 }
 
 }
@@ -495,10 +432,11 @@ Hey Birthday Girl 💖
 </h1>
 
 <h2 class="subtitle">
-Do You Know Me?
+DO YOU KNOW ME?
 </h2>
 
 <div class="option-box">
+
 <button class="btn btn1" onclick="openPage()">
 Yea ✨
 </button>
@@ -506,6 +444,7 @@ Yea ✨
 <button class="btn btn2" onclick="openPage()">
 Ofcourse 💫
 </button>
+
 </div>
 
 </div>
@@ -517,9 +456,11 @@ Ofcourse 💫
 <div class="hearts"></div>
 
 <div class="banner">
+
 <img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
 
 <img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
 </div>
 
 <div class="hero">
@@ -531,17 +472,11 @@ Ofcourse 💫
 <h1 class="birthday">Birthday</h1>
 
 <div class="date">
-13 May ✨
+🎂 13 May ✨
 </div>
 
 <button class="mail-btn" id="openMessage">
 Click Here Swastika Ji 💌
-</button>
-
-<br>
-
-<button class="mail-btn" onclick="openStory()" style="margin-top:25px;">
-Next Surprise 🎁
 </button>
 
 </div>
@@ -583,160 +518,19 @@ To You 🌸
 Happy Birthday Swastika Ji 🥳🎂💖<br><br>
 
 You are one of the most special people in my life.  
-Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨<br><br>
 
 May your every dream come true,  
 May happiness always stay with you,  
-And may your life always shine brighter than stars. 🌙💫
+And may your life always shine brighter than stars. 🌙💫<br><br>
 
-Thank you for being so amazing and making life more beautiful just by being in it. 💕
+Thank you for being so amazing and making life more beautiful just by being in it. 💕<br><br>
 
 Always keep smiling, birthday girl 🌸
 
 </p>
 
 </div>
-
-<!-- STORY PAGES -->
-
-<section class="page storyPage bg1 activeStory" id="story1" style="display:none;">
-
-<h1 class="main-title">Hey Birthday Girl ✨</h1>
-
-<div class="subtitle">
-Do You Know Me? 💖
-</div>
-
-<div class="option-box">
-<button class="btn btn1" onclick="nextStory(2)">Yea 😌</button>
-<button class="btn btn2" onclick="nextStory(2)">Ofcourse 😎</button>
-</div>
-
-</section>
-
-<section class="page storyPage bg2" id="story2">
-
-<div class="fancy">Dear Swastika Ji 🌸</div>
-
-<div style="font-size:1.6rem;color:#ffe082;margin-bottom:20px;font-family:'Cinzel',serif;">
-🎂 Born On 13 May 🎂
-</div>
-
-<div class="text">
-
-Today is not just a normal day... 💫<br><br>
-
-Today the world became more beautiful because someone special was born. ✨<br><br>
-
-Your smile has that magical vibe which can make any bad day feel perfect. 🌹
-
-</div>
-
-<button class="next-btn" onclick="nextStory(3)">
-Next ➜
-</button>
-
-</section>
-
-<section class="page storyPage bg3" id="story3">
-
-<h1 class="final-msg">
-A Little Truth 💖
-</h1>
-
-<div class="text">
-
-Some people enter life normally...<br><br>
-
-But some people become memories, emotions, smiles and happiness together. 🌙✨<br><br>
-
-And honestly... you are one of them.
-
-</div>
-
-<button class="next-btn" onclick="nextStory(4)">
-Continue 💫
-</button>
-
-</section>
-
-<section class="page storyPage bg4" id="story4">
-
-<h1 class="final-msg" style="color:#ff1493;">
-Your Vibes 🌷
-</h1>
-
-<div class="text" style="color:#222;">
-
-✨ Cute Smile<br>
-✨ Pure Heart<br>
-✨ Beautiful Nature<br>
-✨ Positive Energy<br>
-✨ And that adorable personality...<br><br>
-
-Everything about you feels special 🌸
-
-</div>
-
-<button class="next-btn" onclick="nextStory(5)">
-One More Thing 💌
-</button>
-
-</section>
-
-<section class="page storyPage bg5" id="story5">
-
-<h1 class="final-msg" style="color:#ffd700;">
-Birthday Wish 🎂
-</h1>
-
-<div class="text">
-
-I wish your every dream becomes reality ✨<br><br>
-
-May your life always stay filled with happiness, success, peace and endless smiles 🌹<br><br>
-
-And whenever life gets difficult...<br>
-
-Always remember that you are stronger and more amazing than you think 💫
-
-</div>
-
-<button class="next-btn" onclick="nextStory(6)">
-Final Surprise 🎁
-</button>
-
-</section>
-
-<section class="page storyPage bg6" id="story6">
-
-<div class="final-msg" id="typingText"></div>
-
-<div class="text" id="animatedWish"
-style="font-family:'Dancing Script',cursive;
-font-size:2.2rem;
-opacity:0;
-transition:1s;">
-
-Keep Smiling 🌸<br>
-Keep Shining ✨<br>
-Keep Being Amazing 💖<br><br>
-
-Because people like you make the world beautiful 🌍
-
-</div>
-
-<div class="signature">
-
-— Made With Endless Efforts & Good Wishes 💫<br><br>
-
-<span style="font-size:2rem;color:#fff176;">
-By AMIT ✨
-</span>
-
-</div>
-
-</section>
 
 <script>
 
@@ -780,19 +574,25 @@ heartsContainer.appendChild(heart);
 
 }
 
-/* OPEN PAGE */
+/* PAGE OPEN FIXED */
 
 function openPage(){
 
-document.getElementById('page1').style.opacity='0';
+const page1 = document.getElementById("page1");
+const page2 = document.getElementById("page2");
+
+page1.style.transition = "1s";
+page1.style.opacity = "0";
 
 setTimeout(()=>{
 
-document.getElementById('page1').style.display='none';
+page1.style.display = "none";
 
-document.getElementById('page2').classList.add('show');
+page2.style.display = "block";
 
-},800);
+page2.classList.add("show");
+
+},1000);
 
 }
 
@@ -813,70 +613,6 @@ messageBox.classList.add('active');
 closeBtn.onclick = () => {
 
 messageBox.classList.remove('active');
-
-}
-
-/* OPEN STORY */
-
-function openStory(){
-
-document.getElementById('page2').style.display='none';
-
-document.getElementById('story1').style.display='flex';
-
-}
-
-/* NEXT STORY */
-
-function nextStory(num){
-
-document.querySelectorAll('.storyPage').forEach(page=>{
-
-page.style.display='none';
-
-});
-
-document.getElementById('story'+num).style.display='flex';
-
-if(num===6){
-
-startTyping();
-
-}
-
-}
-
-/* TYPING EFFECT */
-
-function startTyping(){
-
-let text = "Happy Birthday Swastika Ji 🎉";
-
-let i = 0;
-
-let typing = document.getElementById("typingText");
-
-typing.innerHTML = "";
-
-function type(){
-
-if(i < text.length){
-
-typing.innerHTML += text.charAt(i);
-
-i++;
-
-setTimeout(type,100);
-
-}else{
-
-document.getElementById('animatedWish').style.opacity='1';
-
-}
-
-}
-
-type();
 
 }
 
