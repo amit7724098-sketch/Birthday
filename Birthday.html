@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Happy Birthday Swastika Ji 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Pacifico&family=Cinzel:wght@500&family=Great+Vibes&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:#050816;
+font-family:'Poppins',sans-serif;
+}
+
+/* ================= FIRST PAGE ================= */
+
+.page{
+width:100%;
+height:100vh;
+position:absolute;
+top:0;
+left:0;
+transition:1s;
+}
+
+#page1{
+background:
+linear-gradient(135deg,#090d1f,#1f0a2e,#081b29);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+overflow:hidden;
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle linear infinite;
+opacity:.6;
+}
+
+@keyframes twinkle{
+0%{transform:translateY(0px);opacity:.3;}
+50%{opacity:1;}
+100%{transform:translateY(-100vh);opacity:.2;}
+}
+
+.main-title{
+font-size:5rem;
+font-family:'Great Vibes',cursive;
+background:linear-gradient(to right,#ff4d9d,#ffd6f6,#ffffff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:glow 2s infinite alternate;
+text-align:center;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 20px #ff4da6;
+}
+to{
+text-shadow:0 0 40px #ffffff;
+}
+}
+
+.subtitle{
+margin-top:20px;
+font-size:2rem;
+color:white;
+font-family:'Cinzel',serif;
+letter-spacing:2px;
+}
+
+.option-box{
+margin-top:50px;
+display:flex;
+gap:30px;
+}
+
+.btn{
+padding:18px 40px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1.1rem;
+font-family:'Montserrat',sans-serif;
+font-weight:700;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.btn1{
+background:linear-gradient(45deg,#ff4d6d,#ff8fab);
+color:white;
+box-shadow:0 0 25px #ff4d6d;
+}
+
+.btn2{
+background:linear-gradient(45deg,#8338ec,#3a86ff);
+color:white;
+box-shadow:0 0 25px #3a86ff;
+}
+
+.btn:hover{
+transform:scale(1.12);
+}
+
+/* ================= SECOND PAGE ================= */
+
+#page2{
+background:
+linear-gradient(135deg,#120b24,#29104a,#0c1f36);
+display:none;
+overflow:auto;
+padding-bottom:80px;
+}
+
+.show{
+display:block !important;
+animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(1.05);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.banner{
+display:flex;
+justify-content:space-between;
+padding:20px;
+}
+
+.banner img{
+width:250px;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px);}
+50%{transform:translateY(-20px);}
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+padding:40px;
+}
+
+.left{
+text-align:center;
+}
+
+.happy{
+font-size:5rem;
+font-family:'Pacifico',cursive;
+color:#ff7eb3;
+animation:pulse 1.5s infinite;
+}
+
+.birthday{
+font-size:6rem;
+font-family:'Dancing Script',cursive;
+background:linear-gradient(to right,#ffd6ff,#ffffff,#ffb3c6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+.date{
+margin-top:20px;
+font-size:2rem;
+font-family:'Cinzel',serif;
+color:#ffe066;
+}
+
+.mail-btn{
+margin-top:40px;
+padding:18px 40px;
+border:none;
+border-radius:40px;
+font-size:1.2rem;
+cursor:pointer;
+background:linear-gradient(45deg,#ff006e,#8338ec);
+color:white;
+font-family:'Montserrat';
+font-weight:bold;
+box-shadow:0 0 30px #ff006e;
+transition:.4s;
+}
+
+.mail-btn:hover{
+transform:scale(1.08);
+}
+
+.right{
+position:relative;
+}
+
+.card{
+width:330px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 25px rgba(255,255,255,.2);
+position:relative;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+border-radius:20px;
+}
+
+.name{
+margin-top:20px;
+font-size:2rem;
+font-family:'Great Vibes',cursive;
+color:#ffd6ff;
+}
+
+.circle{
+width:160px;
+height:160px;
+border:4px dashed #ffb3c6;
+border-radius:50%;
+position:absolute;
+top:-40px;
+right:-40px;
+animation:rotate 10s linear infinite;
+}
+
+@keyframes rotate{
+100%{
+transform:rotate(360deg);
+}
+}
+
+.circle::before{
+content:'💖';
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:2rem;
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+width:90%;
+max-width:750px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+padding:30px;
+border-radius:30px;
+box-shadow:0 0 40px rgba(255,255,255,.2);
+transition:.5s;
+z-index:10;
+}
+
+.message-box.active{
+transform:translate(-50%,-50%) scale(1);
+}
+
+.close{
+position:absolute;
+right:25px;
+top:20px;
+font-size:1.5rem;
+color:white;
+cursor:pointer;
+}
+
+.message-title{
+font-size:3rem;
+font-family:'Great Vibes',cursive;
+text-align:center;
+color:#ffb3c6;
+margin-bottom:20px;
+}
+
+.message{
+font-size:1.2rem;
+line-height:2;
+color:white;
+font-family:'Poppins';
+text-align:center;
+}
+
+.hearts{
+position:absolute;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.hearts span{
+position:absolute;
+font-size:20px;
+animation:heartMove linear infinite;
+}
+
+@keyframes heartMove{
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-100vh) scale(1.5);
+opacity:0;
+}
+}
+
+@media(max-width:768px){
+
+.main-title{
+font-size:3.5rem;
+}
+
+.subtitle{
+font-size:1.3rem;
+}
+
+.happy{
+font-size:3rem;
+}
+
+.birthday{
+font-size:4rem;
+}
+
+.option-box{
+flex-direction:column;
+}
+
+.banner img{
+width:140px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FIRST PAGE -->
+
+<div id="page1" class="page">
+
+<div class="stars"></div>
+
+<h1 class="main-title">
+Hey Birthday Girl 💖
+</h1>
+
+<h2 class="subtitle">
+Do You Know Me?
+</h2>
+
+<div class="option-box">
+<button class="btn btn1" onclick="openPage()">
+Yea ✨
+</button>
+
+<button class="btn btn2" onclick="openPage()">
+Ofcourse 💫
+</button>
+</div>
+
+</div>
+
+<!-- SECOND PAGE -->
+
+<div id="page2" class="page">
+
+<div class="hearts"></div>
+
+<div class="banner">
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
+</div>
+
+<div class="hero">
+
+<div class="left">
+
+<h1 class="happy">Happy</h1>
+
+<h1 class="birthday">Birthday</h1>
+
+<div class="date">
+27 May ✨
+</div>
+
+<button class="mail-btn" id="openMessage">
+Click Here Swastika Ji 💌
+</button>
+
+</div>
+
+<div class="right">
+
+<div class="card">
+
+<div class="circle"></div>
+
+<img src="https://i.pinimg.com/736x/87/ea/e8/87eae89dc58f2e19d71fa8d78c35f5c.jpg">
+
+<div class="name">
+Dear Swastika Ji 💖
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MESSAGE BOX -->
+
+<div class="message-box" id="messageBox">
+
+<div class="close" id="closeBox">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<h1 class="message-title">
+To You 🌸
+</h1>
+
+<p class="message">
+
+Happy Birthday Swastika Ji 🥳🎂💖<br><br>
+
+You are one of the most special people in my life.  
+Your smile, your nature, your presence — everything feels beautiful and peaceful. ✨
+
+May your every dream come true,  
+May happiness always stay with you,  
+And may your life always shine brighter than stars. 🌙💫
+
+Thank you for being so amazing and making life more beautiful just by being in it. 💕
+
+Always keep smiling, birthday girl 🌸
+
+</p>
+
+</div>
+
+<script>
+
+/* STARS */
+
+let starsContainer = document.querySelector('.stars');
+
+for(let i=0;i<80;i++){
+
+let star = document.createElement('span');
+star.classList.add('star');
+
+star.style.left = Math.random()*100 + '%';
+star.style.top = Math.random()*100 + '%';
+
+star.style.animationDuration = (Math.random()*5+5)+'s';
+
+starsContainer.appendChild(star);
+}
+
+/* HEARTS */
+
+let heartsContainer = document.querySelector('.hearts');
+
+for(let i=0;i<40;i++){
+
+let heart = document.createElement('span');
+
+heart.innerHTML='💖';
+
+heart.style.left=Math.random()*100+'%';
+
+heart.style.animationDuration=(Math.random()*6+4)+'s';
+
+heart.style.fontSize=(Math.random()*20+10)+'px';
+
+heartsContainer.appendChild(heart);
+
+}
+
+/* PAGE TRANSITION */
+
+function openPage(){
+
+document.getElementById('page1').style.opacity='0';
+
+setTimeout(()=>{
+
+document.getElementById('page1').style.display='none';
+
+document.getElementById('page2').classList.add('show');
+
+},800);
+
+}
+
+/* MESSAGE BOX */
+
+let openBtn = document.getElementById('openMessage');
+let closeBtn = document.getElementById('closeBox');
+let messageBox = document.getElementById('messageBox');
+
+openBtn.onclick = () => {
+
+messageBox.classList.add('active');
+
+}
+
+closeBtn.onclick = () => {
+
+messageBox.classList.remove('active');
+
+}
+
+</script>
+
+</body>
+  </html>
